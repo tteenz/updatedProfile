@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Tina Tran</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <a href="index.html" class="Name">Tina Tran</a>
+        <div class="header-right">
+            <a href="index.html">About</a>
+
+            <a href="portfolio.html">Projects</a>
+
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <h2>Portfolio</h2>
+    <p>Below are the list of projects that I've have helped build and worked on.</p>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openProject(event, 'Gif')" id="defaultOpen">Giftastic</button>
+        <button class="tablinks" onclick="openProject(event, 'Crystal')">Disney Collector</button>
+        <button class="tablinks" onclick="openProject(event, 'Project1')">Fooder</button>
+    </div>
+
+    <div id="Project1" class="tabcontent">
+        <h3>Fooder</h3>
+        <p>An app similar to Tinder however for food because who doesn't love food?
+            <br /><br />
+            Once user enters the application, it will give a side by side comparison in which they can select multiple
+            type of food they're currently craving.
+            <br /> <br />
+            After they have selected a few type of food type, iPapi will run in the background to gather information of
+            user's city so that our application can view restaurant that are nearby.
+            <br /> <br />
+            Once you click GRUB ON, a list of restaurant based on your type of food selection will pop up.
+            <br /><br />
+            If there is nothing you like, you can restart the app and go through the process again!
+            <br />
+            <br />Visit <a href="https://Oaak.github.io/TH-G-TT-WW-group-project-1/" target="_blank">Fooder</a> to test
+            our app.
+            <br /> Visit <a href="https://github.com/tteenz/TH-G-TT-WW-group-project-1" target="_blank">Github</a> to
+            check
+            out the codes.
+        </p>
+    </div>
+
+    <div id="Gif" class="tabcontent">
+        <h3>GifTastic</h3>
+        <p>Enter a cartoon show to your liking in the search box.
+            <br /><br />
+            Once you enter the show into the search box,
+            a button will be created above.
+            <br />
+            <br />
+            Once you click the button above, 10 gifs will be display below.
+            <br /><br />
+            When you click on the gif, it will play. If you click on it again, the gif will stop.
+            <br />
+            <br />Visit <a href="https://tteenz.github.io/GifTastic/" target="_blank">GifTastic</a> to check out your
+            favorite
+            Gif
+            <br /> Visit <a href="https://github.com/tteenz/GifTastic" target="_blank">Github</a> to check
+            out
+            the codes.
+        </p>
+
+    </div>
+
+    <div id="Crystal" class="tabcontent">
+        <h3>Disney Collector</h3>
+        <p>You will be given a random number at the start of the game, in which you will guess.
+            <br /><br /> There will be four characters displayed at the bottom of the page. Each character carries a
+            specific
+            amount of points.
+            <br /><br />
+            By clicking on a character, you are adding that specific amount of points to your total score.
+            <br /><br />
+
+            You win the game by matching your total score to the random number. You lose the game if your total score
+            goes above the random number.
+            <br /><br /> The value of each character is hidden from you until you click on it.
+            <br /> <br />Each time the game starts, the game will change the values of each character.
+            <br /><br />
+            Visit <a href="https://tteenz.github.io/unit-4-game" target="_blank">Disney Collector</a> to play.
+            <br />
+            Visit <a href="https://github.com/tteenz/unit-4-game" target="_blank">Github</a> to check out
+            the codes.
+
+        </p>
+    </div>
+
+    <footer class="footer1">
+        <div class="row justify-content-md-center">
+            <a href="https://github.com/tteenz" target="_blank"><img src="assets/images/github-logo-icon-28.png" class="center"
+                    style="width:60" height="60"></a>
+            <a href="https://www.linkedin.com/in/tina-tran-0b46757b/" target="_blank"><img src="assets/images/linked-icon-27.jpg"
+                    class="center" style="width:60" height="60"></a>
+
+        </div>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright</div>
+        <!-- Copyright -->
+
+    </footer>
+
+    <script>
+        function openProject(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
