@@ -103,6 +103,9 @@ h2 {
 
 }
 
+.tablinks { 
+    color: #777777;
+}
 h3 {
     color: #B4869F;
     font-family: Georgia, serif;
